@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beast Unisex Gym</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/site.webmanifest">
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style>
+        body {
+
+            margin: 0px;
+            padding: 0px;
+            /* background: */
+            /* height: 25000px; */
+            /* width: auto; */
+        }
+
+        body::before {
+            background: url(images/f.jpg) no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 9;
+        }
+
+        .left {
+            color: rgb(0, 255, 30);
+            /* border: 2px solid red; */
+            position: absolute;
+            left: 15px;
+            top: 0px;
+            width: 150px;
+        }
+
+        .left img {
+            width: 125px;
+            /* filter: invert(100%); */
+            opacity: 1;
+        }
+
+        .mid {
+            /* border: 2px solid red; */
+            display: block;
+            width: 700px;
+            margin: 30px auto;
+        }
+
+        .class li {
+            display: inline-block;
+        }
+
+        .class li a {
+            color: azure;
+            font-size: 22px;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        .class li a:hover {
+            text-decoration: underline;
+            color: rgb(248, 184, 184);
+        }
+
+        .right {
+            /* border: 2px solid red; */
+            position: absolute;
+            right: 35px;
+            top: 25px;
+            margin: 5px;
+
+        }
+
+
+
+        .btn {
+            color: rgb(7, 120, 143);
+            background-color: rgb(231, 121, 147);
+            padding: 3px;
+            margin: 7px;
+            border: 2px solid rgb(242, 255, 0);
+            border-radius: 8px;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px rgb(9, 255, 0);
+        }
+
+        .btn:hover {
+            text-decoration: underline;
+            background-color: rgb(255, 255, 255);
+            color: blueviolet;
+
+        }
+
+        .container {
+            border: 2px solid white;
+            color: blueviolet;
+            margin: 140px 75px;
+            padding: 12px 35px;
+            width: 25%;
+            backdrop-filter: blur(20px);
+            border-radius: 104px;
+            font-size: 22px;
+            box-shadow: 0px 0px 5px 2px rgb(97, 95, 95), 0px 0px 10px 3px rgb(241, 129, 129);
+        }
+
+        .submit input {
+            /* position: relative; */
+            /* left: 150px; */
+            border: 2px solid rgb(251, 248, 248);
+            border-style: dashed;
+            border-radius: 5px;
+            margin: auto 130px;
+            width: 100px;
+            height: 33px;
+            background-color: red;
+            color: white;
+        }
+
+        .h1 {
+            font-size: 34px;
+
+        }
+
+        /* .active:visited{
+            color: greenyellow;
+        } */
+        .active {
+            background-color: rgb(53, 52, 52);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="images/logo.png">
+        </div>
+        <div class="mid">
+            <ul class="class">
+                <li class="active"><a href="#"> Home</a></li>
+                <li><a href="https://www.calculator.net/bmi-calculator.html" target="_blank">Fitness Calculator</a></li>
+                <li><a href="https://www.facebook.com/GoldsGymIndia/" target="_blank">Contact Us</a></li>
+                <li><a href="https://youtube.com/channel/UCcu_Yhtrjy7V_w8zj0X2LDg" target="_blank">About Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn"> <a href="login2.html"> Login || Signup</a></button>
+        </div>
+    </header>
+    <div class="container">
+        <strong>
+            <h1 class="h1">Join the best gym now !!</h1>
+        </strong>
+        <form action="backen.php">
+            <div> Name: <input type="text" name="myname"></div><br>
+            <div> Address: <input type="text" name="myRole"></div><br>
+            <div> Email: <input type="email" name="myemail"></div><br>
+            <div> DOB: <input type="date" name="myDOB"></div><br>
+            <div> Phone Number: <input type="number" name="mynumber"></div><br>
+            <!-- <div> elegible: <input type="checkbox" name="myeligible"></div><br> -->
+            <div> Gender: <input type="radio" name="mygender">Male <input type="radio" name="mygender">Female
+                <input type="radio" name="mygender">Other
+            </div><br>
+            <!-- <div class="form">Why You Want To Join The Gym: <textarea name="mytext" cols="30" rows="10" style="width: 273px; height: 56px;"></textarea></div>
+            <br> -->
+            <div><label for="myselect">Level:</label>
+                <select name="myselect" id="myselect">
+                    <option value="beg">BEGGINER</option>
+                    <option value="inter">INTERMIDIATE</option>
+                    <option value="adv">ADVANCE</option>
+                </select>
+            </div><br>
+            <span class="submit"><strong><input type="submit" name="mysibmit"></strong></span><br>
+
+            <!-- Reset: <input type="reset" name="myreset"> -->
+        </form>
+    </div>
+</body>
+
+</html>
